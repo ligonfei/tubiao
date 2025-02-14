@@ -4,7 +4,6 @@ proxy-groups:
   - {name: YouTube,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/YouTube.png?raw=true}
   - {name: 推特,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Twitter.png?raw=true}
   - {name: Facebook,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Facebook.png?raw=true}
-  - {name: Ins,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Instagram.png?raw=true}
   - {name: Google,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Google_Search.png?raw=true}
   - {name: ChatGPT,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/openai.png?raw=true}
   - {name: GitHub,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://raw.githubusercontent.com/565465474575/tubiao/9d536ba33410f8d520f6752fe9d546039b4a820f/github.svg}
@@ -38,7 +37,6 @@ rules:
   - RULE-SET,X_domain, 推特
   - RULE-SET,facebook_domain, Facebook
   - RULE-SET,facebook_ip, Facebook
-  - RULE-SET,instagram_domain, Ins
   - RULE-SET,google_domain, Google
   - RULE-SET,onedrive_domain, OneDrive
   - RULE-SET,Microsoft_domain, Microsoft
@@ -73,7 +71,6 @@ rule-providers:
   youtube_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   X_domain: {!!merge <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/x.mrs"}
   facebook_domain: {!!merge <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/facebook.mrs"}
-  instagram_domain: {!!merge <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/instagram.mrs"}
   google_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
   github_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
   telegram_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
