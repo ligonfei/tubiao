@@ -7,7 +7,6 @@ proxy-groups:
   - {name: Google,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Google_Search.png?raw=true}
   - {name: ChatGPT,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/openai.png?raw=true}
   - {name: GitHub,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://raw.githubusercontent.com/565465474575/tubiao/9d536ba33410f8d520f6752fe9d546039b4a820f/github.svg}
-  - {name: OneDrive,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://raw.githubusercontent.com/565465474575/tubiao/aeba5b243c5a68f8a79e415d53f58aa8a181dd0a/onedrive.svg}
   - {name: Microsoft,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://raw.githubusercontent.com/565465474575/tubiao/9d536ba33410f8d520f6752fe9d546039b4a820f/microsoft.svg}
   - {name: 交易所,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/BTC.png?raw=true}
   - {name: TikTok,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/TikTok_1.png?raw=true}
@@ -20,10 +19,11 @@ proxy-groups:
   - {name: 漏网之鱼,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://raw.githubusercontent.com/565465474575/tubiao/031d65a2ad65a91f481d5252a5cc3c82780858e4/fish.svg}
 rules:
   - RULE-SET,private_domain,DIRECT
+  - RULE-SET,Microsoft_domain, Microsoft
   - RULE-SET,steam_domain, 游戏平台
   - RULE-SET,xbox_domain, 游戏平台
   - RULE-SET,rockstar_domain, 游戏平台
-#  - RULE-SET,xbox.cn_domain, 游戏平台
+  - RULE-SET,xbox.cn_domain, 游戏平台
   - RULE-SET,ubisoft_domain, 游戏平台
   - RULE-SET,epic_domain, 游戏平台
   - RULE-SET,ea_domain, 游戏平台
@@ -38,8 +38,6 @@ rules:
   - RULE-SET,facebook_domain, Facebook
   - RULE-SET,facebook_ip, Facebook
   - RULE-SET,google_domain, Google
-  - RULE-SET,onedrive_domain, OneDrive
-  - RULE-SET,Microsoft_domain, Microsoft
   - RULE-SET,tiktok_domain, TikTok
   - RULE-SET,speedtest_domain, Speedtest
   - RULE-SET,telegram_domain, Telegram
@@ -76,7 +74,6 @@ rule-providers:
   telegram_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
   netflix_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"}
   disney_domain: {!!merge <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/disney.mrs"}
-  onedrive_domain: {!!merge <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.mrs"}
   Microsoft_domain: {!!merge <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs"}
   binance_domain: {!!merge <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/binance.mrs"}
   OKX_domain: {!!merge <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/okx.mrs"}
