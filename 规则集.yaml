@@ -19,7 +19,7 @@ proxy-groups:
   - {name: 漏网之鱼,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://raw.githubusercontent.com/565465474575/tubiao/031d65a2ad65a91f481d5252a5cc3c82780858e4/fish.svg}
 rules:
   - RULE-SET,private_domain,DIRECT
-  - RULE-SET,bing@cn_domain, Microsoft
+  - RULE-SET,bing@cn_domain, 国内平台
   - RULE-SET,steam_domain, 游戏平台
   - RULE-SET,xbox_domain, 游戏平台
   - RULE-SET,rockstar_domain, 游戏平台
