@@ -19,7 +19,7 @@ proxy-groups:
   - {name: 漏网之鱼,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://raw.githubusercontent.com/565465474575/tubiao/031d65a2ad65a91f481d5252a5cc3c82780858e4/fish.svg}
 rules:
   - RULE-SET,private_domain,DIRECT
-  - RULE-SET,Microsoft_domain, Microsoft
+  - RULE-SET,bing@cn_domain, Microsoft
   - RULE-SET,steam_domain, 游戏平台
   - RULE-SET,xbox_domain, 游戏平台
   - RULE-SET,rockstar_domain, 游戏平台
@@ -32,6 +32,7 @@ rules:
   - RULE-SET,apple_domain, Apple
   - RULE-SET,proxylite, 节点选择
   - RULE-SET,openai, ChatGPT
+  - RULE-SET,Microsoft_domain, Microsoft
   - RULE-SET,github_domain, GitHub
   - RULE-SET,youtube_domain, YouTube
   - RULE-SET,X_domain, 推特
@@ -56,6 +57,7 @@ rule-anchor:
   qcy: &qcy {type: http, interval: 86400, behavior: domain, format: text}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
+  bing@cn_domain: {!!merge <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bing@cn.mrs"}
   rockstar_domain: {!!merge <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/rockstar.mrs"}
   xbox_domain: {!!merge <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/xbox.mrs"}
   xbox.cn_domain: {!!merge <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/xbox@cn.mrs"}
