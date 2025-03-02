@@ -32,8 +32,8 @@ rules:
   - RULE-SET,apple_domain, Apple
   - RULE-SET,proxylite, 节点选择
   - RULE-SET,openai, ChatGPT
-  - RULE-SET,Microsoft_domain, Microsoft
   - RULE-SET,github_domain, GitHub
+  - RULE-SET,Microsoft_domain, Microsoft
   - RULE-SET,youtube_domain, YouTube
   - RULE-SET,X_domain, 推特
   - RULE-SET,facebook_domain, Facebook
