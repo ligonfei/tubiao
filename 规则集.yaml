@@ -12,13 +12,13 @@ dns:
     - "+.msftncsi.com"
     - "time.*.com"
   default-nameserver:
-    - 223.5.5.5
+    - 192.168.31.1
   proxy-server-nameserver:
-    - https://223.5.5.5/dns-query
+    - https://192.168.31.1/dns-query
   # namesever尽量用运营商提供的DNS
   nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
+    - 192.168.31.1
+    - 8.8.8.8
 proxy-groups:
   - {name: 节点选择,type: select, include-all: true,proxies: [DIRECT,REJECT],icon: https://raw.githubusercontent.com/565465474575/tubiao/ab1a070e68867fac817671e01a950e6ef279e747/%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9.svg}
   - {name: 游戏平台,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Game.png?raw=true}
