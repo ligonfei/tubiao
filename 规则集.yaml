@@ -96,8 +96,8 @@ dns:
 proxy-groups:
   - {name: 节点选择,type: select, include-all: true,proxies: [DIRECT,REJECT],icon: https://raw.githubusercontent.com/565465474575/tubiao/ab1a070e68867fac817671e01a950e6ef279e747/%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9.svg}
   - {name: 游戏平台,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Game.png?raw=true}
-  - {name: YouTube,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/YouTube.png?raw=true}
-  - {name: 推特,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Twitter.png?raw=true}
+  - {name: YouTube,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://raw.githubusercontent.com/ligonfei/tubiao/refs/heads/main/youtube.svg}
+  - {name: 推特,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/ligonfei/tubiao/raw/refs/heads/main/twitter.svg}
   - {name: Facebook,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Facebook.png?raw=true}
   - {name: Google,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Google_Search.png?raw=true}
   - {name: ChatGPT,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/openai.png?raw=true}
