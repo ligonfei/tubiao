@@ -1,23 +1,19 @@
-# 机场订阅
 proxy-providers:
-  机场1:
-    url: "机场订阅"
+  订阅链接:
+    url: "链接地址"
     type: http
     interval: 86400
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
-    proxy: 直连
+    proxy: 国内平台
     header:
       User-Agent:
       - "Class"
       - "mihomo"
       - "Class.meta"
 
-# 节点信息
-proxies:
-  - {name: 直连, type: direct}
 
 # 全局配置 
 port: 7890
