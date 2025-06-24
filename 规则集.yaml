@@ -94,26 +94,152 @@ dns:
     - 1.1.1.1
 
 proxy-groups:
-  - {name: 节点选择,type: select, include-all: true,proxies: [DIRECT,REJECT],icon: https://raw.githubusercontent.com/565465474575/tubiao/ab1a070e68867fac817671e01a950e6ef279e747/%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9.svg}
-  - {name: 游戏平台,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Game.png?raw=true}
-  - {name: YouTube,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://raw.githubusercontent.com/ligonfei/tubiao/refs/heads/main/youtube.svg}
-  - {name: 推特,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/ligonfei/tubiao/raw/refs/heads/main/twitter.svg}
-  - {name: Facebook,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Facebook.png?raw=true}
-  - {name: Google,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Google_Search.png?raw=true}
-  - {name: ChatGPT,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/openai.png?raw=true}
-  - {name: GitHub,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://raw.githubusercontent.com/565465474575/tubiao/9d536ba33410f8d520f6752fe9d546039b4a820f/github.svg}
-  - {name: Microsoft,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://raw.githubusercontent.com/565465474575/tubiao/9d536ba33410f8d520f6752fe9d546039b4a820f/microsoft.svg}
-  - {name: 交易所,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/BTC.png?raw=true}
-  - {name: TikTok,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/TikTok_1.png?raw=true}
-  - {name: Telegram,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Telegram.png?raw=true}
-  - {name: NETFLIX,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Netflix.png?raw=true}
-  - {name: Disney+,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Disney+_1.png?raw=true}
-  - {name: Speedtest,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://raw.githubusercontent.com/565465474575/tubiao/aeba5b243c5a68f8a79e415d53f58aa8a181dd0a/speedtest.svg}
-  - {name: Apple,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/Apple.png?raw=true}
-  - {name: 国内平台,type: select, proxies: [ 节点选择,DIRECT,REJECT],icon: https://github.com/565465474575/tubiao/blob/main/China.png?raw=true}
-  - {name: 漏网之鱼,type: select, include-all: true,proxies: [ 节点选择,DIRECT,REJECT],icon: https://raw.githubusercontent.com/565465474575/tubiao/031d65a2ad65a91f481d5252a5cc3c82780858e4/fish.svg}
+proxy-groups:
+  - name: 节点选择
+    type: select
+    include-all: true
+    proxies:
+      - DIRECT
+      - REJECT
+    icon: https://raw.githubusercontent.com/565465474575/tubiao/ab1a070e68867fac817671e01a950e6ef279e747/%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9.svg
+  - name: 游戏平台
+    type: select
+    include-all: true
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://github.com/565465474575/tubiao/blob/main/Game.png?raw=true
+  - name: YouTube
+    type: select
+    include-all: true
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://raw.githubusercontent.com/ligonfei/tubiao/refs/heads/main/youtube.svg
+  - name: 推特
+    type: select
+    include-all: true
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://github.com/ligonfei/tubiao/raw/refs/heads/main/twitter.svg
+  - name: Facebook
+    type: select
+    include-all: true
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://github.com/565465474575/tubiao/blob/main/Facebook.png?raw=true
+  - name: Google
+    type: select
+    include-all: true
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://github.com/565465474575/tubiao/blob/main/Google_Search.png?raw=true
+  - name: ChatGPT
+    type: select
+    include-all: true
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://github.com/565465474575/tubiao/blob/main/openai.png?raw=true
+  - name: GitHub
+    type: select
+    include-all: true
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://raw.githubusercontent.com/565465474575/tubiao/9d536ba33410f8d520f6752fe9d546039b4a820f/github.svg
+  - name: Microsoft
+    type: select
+    include-all: true
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://raw.githubusercontent.com/565465474575/tubiao/9d536ba33410f8d520f6752fe9d546039b4a820f/microsoft.svg
+  - name: 交易所
+    type: select
+    include-all: true
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://github.com/565465474575/tubiao/blob/main/BTC.png?raw=true
+  - name: TikTok
+    type: select
+    include-all: true
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://github.com/565465474575/tubiao/blob/main/TikTok_1.png?raw=true
+  - name: Telegram
+    type: select
+    include-all: true
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://github.com/565465474575/tubiao/blob/main/Telegram.png?raw=true
+  - name: NETFLIX
+    type: select
+    include-all: true
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://github.com/565465474575/tubiao/blob/main/Netflix.png?raw=true
+  - name: Disney+
+    type: select
+    include-all: true
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://github.com/565465474575/tubiao/blob/main/Disney+_1.png?raw=true
+  - name: Speedtest
+    type: select
+    include-all: true
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://raw.githubusercontent.com/565465474575/tubiao/aeba5b243c5a68f8a79e415d53f58aa8a181dd0a/speedtest.svg
+  - name: Apple
+    type: select
+    include-all: true
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://github.com/565465474575/tubiao/blob/main/Apple.png?raw=true
+  - name: 国内平台
+    type: select
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://github.com/565465474575/tubiao/blob/main/China.png?raw=true
+  - name: 漏网之鱼
+    type: select
+    include-all: true
+    proxies:
+      - 节点选择
+      - DIRECT
+      - REJECT
+    icon: https://raw.githubusercontent.com/565465474575/tubiao/031d65a2ad65a91f481d5252a5cc3c82780858e4/fish.svg
+
 rules:  
-  - RULE-SET,private_domain,国内平台
+  - RULE-SET,private_domain, 国内平台
   - RULE-SET,steam_domain, 游戏平台
   - RULE-SET,xbox_domain, 游戏平台
   - RULE-SET,rockstar_domain, 游戏平台
@@ -147,7 +273,7 @@ rules:
   - RULE-SET,cn_ip, 国内平台
   - MATCH, 漏网之鱼
 rule-anchor:
-  ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
+  ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}  
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 
