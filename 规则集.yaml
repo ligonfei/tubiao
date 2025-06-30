@@ -94,7 +94,6 @@ dns:
     - 1.1.1.1
 
 proxy-groups:
-proxy-groups:
   - name: 节点选择
     type: select
     include-all: true
