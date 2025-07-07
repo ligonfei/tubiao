@@ -1,11 +1,11 @@
 proxy-providers:
   订阅链接:
-    url: "链接地址"
+    url: "订阅链接"
     type: http
     interval: 86400
     health-check:
       enable: true
-      url: https://www.gstatic.com/generate_204
+      url: https://cp.cloudflare.com/generate_204
       interval: 300
     proxy: DIRECT
 
@@ -35,10 +35,10 @@ profile:
   store-fake-ip: true
 
 # 控制面板
-#external-controller: 0.0.0.0:9090
-#secret: "******" 
-#external-ui: ui
-#external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
+external-controller: 0.0.0.0:9090
+secret: "******" 
+external-ui: ui
+external-ui-url: ""
 
 # 嗅探
 sniffer:
@@ -322,7 +322,6 @@ proxy-groups:
 rules:  
   - RULE-SET,private_domain,国内平台 #内网地址
   - RULE-SET,geolocation-cn_domain,国内平台
-  - RULE-SET,geolocation-!cn_domain,节点选择
   - RULE-SET,cn_domain,国内平台
   - RULE-SET,steam_domain,游戏平台
   - RULE-SET,xbox_domain,游戏平台
@@ -389,7 +388,6 @@ rule-providers:
   speedtest_domain: { <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-speedtest.mrs"}
   tiktok_domain: { <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tiktok.mrs"}
   gfw_domain: { <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/gfw.mrs"}
-  geolocation-!cn_domain: { <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/geolocation-!cn.mrs"}
   geolocation-cn_domain: { <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/geolocation-cn.mrs"}
   cn_domain: { <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs"}
   private_ip: { <<: *ip, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/private.mrs"}
