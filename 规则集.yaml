@@ -45,58 +45,67 @@ sniffer:
   enable: true
   sniff:
     HTTP:
-      ports: [80, 8080, 8880]  
+      ports: 
+      - 80
+      - 443
+      - 8080
+      - 8880  
       override-destination: true  
       sniff-request: true  
       sniff-response: false  #
     TLS:
-      ports: [443, 8443]
+      ports: 
+      - 443
+      - 8443
       enabled: true
       skip-cert-verify: false 
     QUIC:
-      ports: [443, 8443]
+      ports:
+      - 443
+      - 8443
       enabled: true
   # 强制嗅探并解析的域名 (国际服务)
   force-domain:
-    - "+.v2ex.com"     
-    - "+.github.com"   
-    - "+.youtube.com"  
-    - "+.twitter.com"  
-    - "+.reddit.com"   
-    - "+.medium.com"   
-    - "+.discord.com"  
-    - "+.tiktok.com"   
+    - "+.v2ex.com"
+    - "+.github.com"
+    - "+.youtube.com"
+    - "+.twitter.com"
+    - "+.reddit.com"
+    - "+.medium.com"
+    - "+.discord.com"
+    - "+.tiktok.com"
     - "+.instagram.com"
-    - "+.spotify.com"  
-    - "+.netflix.com"  
-    - "+.amazon.com"   
+    - "+.spotify.com"
+    - "+.netflix.com"
+    - "+.amazon.com"
     - "+.microsoft.com"
     - "+.cloudflare.com"
   
   # 跳过嗅探的域名 (国内服务)
   skip-domain:
-    - "+.baidu.com"   
-    - "+.taobao.com"  
-    - "+.alipay.com"  
-    - "+.qq.com"      
-    - "+.weibo.com"   
-    - "+.jd.com"      
-    - "+.163.com"     
-    - "+.sina.com.cn" 
-    - "+.gov.cn"      
-    - "+.edu.cn"      
-    - "+.12306.cn"    
-    - "+.icbc.com.cn" 
+    - "+.push.apple.com"
+    - "+.baidu.com"
+    - "+.taobao.com"
+    - "+.alipay.com"
+    - "+.qq.com"
+    - "+.weibo.com"
+    - "+.jd.com"
+    - "+.163.com"
+    - "+.sina.com.cn"
+    - "+.gov.cn"
+    - "+.edu.cn"
+    - "+.12306.cn"
+    - "+.icbc.com.cn"
     - "+.cmbchina.com"
-    - "+.boc.cn"      
-    - "+.ccb.com"     
+    - "+.boc.cn"
+    - "+.ccb.com"
   
   # 智能设备兼容性
   skip-sni: 
-    - "Mijia Cloud"    
-    - "Huawei Home"    
-    - "TP-Link"        
-    - "ASUS Router"    
+    - Mijia Cloud
+    - Huawei Home
+    - TP-Link
+    - ASUS Router
   
   # 性能优化参数
   force-ip-version: false  
@@ -106,17 +115,19 @@ sniffer:
   
   # 排除本地网络
   exclude-ip:
-    - "192.168.0.0/16"    
-    - "10.0.0.0/8"        
-    - "172.16.0.0/12"     
-    - "fe80::/10"         
-    - "fc00::/7"          
+    - 192.168.0.0/16
+    - 10.0.0.0/8 
+    - 172.16.0.0/12
+    - fe80::/10
+    - fc00::/7
   
   # 排除特定IP协议
   disable-protocols:
-    - "bittorrent" 
-    - "ftp"        
-    - "smtp"       
+    - bittorrent
+    - ftp
+    - smtp
+    - pop3
+    - imap
 
 # 入站  
 tun:
@@ -147,7 +158,7 @@ dns:
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - "rule-set:private_domain"
-    - "cn_domain"
+    - "rule-set:cn_domain"
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
     - "time.*.com"
@@ -157,12 +168,14 @@ dns:
     - "+.jd.com"
     - "+.163.com"
     - "+.sina.com.cn"
+    - "ntp.*.com"
+    - "+.market.xiaomi.com"
   default-nameserver:
     - 223.5.5.5 
     - 119.29.29.29 
     - 9.9.9.9        # Quad9（隐私保护）
   proxy-server-nameserver:
-    - 8.8.8.8
+    - https://dns.google/dns-query
     - https://223.5.5.5/dns-query
   nameserver:
     - https://dns.alidns.com/dns-query
@@ -174,6 +187,9 @@ dns:
     geoip-code: CN    
     ipcidr:
       - 240.0.0.0/4   
+  use-hosts: false
+  use-system-hosts: false
+  direct-nameserver: []
 
 proxy-groups:
   - name: 节点选择
@@ -397,3 +413,11 @@ rule-providers:
   telegram_ip: { <<: *ip, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/telegram.mrs"}
   netflix_ip: { <<: *ip, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/netflix.mrs"}
   facebook_ip: { <<: *ip, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/facebook.mrs"}
+
+skip-auth-prefixes:
+  - 127.0.0.1/32
+geox-url:
+  geoip: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat
+  geosite: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
+  mmdb: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb
+  asn: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb
