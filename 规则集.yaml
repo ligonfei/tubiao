@@ -6,7 +6,7 @@ tproxy-port: 7894
 allow-lan: true
 bind-address: "*"
 lan-allowed-ips:
-  - 127.0.0.1
+  - 127.0.0.1/32
   - 192.168.31.0/24
 mode: rule
 ipv6: false
